@@ -9,23 +9,27 @@
 {% block title %}T-SHIRT{% endblock title %}
     {% block content %}
       
-        <div class=" mt-10 px-[200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-5 content-center ">
+        <div class="   grid justify-items-center px-[200px] mt-10 grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xl:grid-col-3 lg:grid-col-3 gap-5  ">
         {% for product in products %}
         
-            <div class="px-[40px]   overflow-hidden  ">
-                <div>
-                    <a href={% url "shop:item" product.id %} class = "MainButton content-center">
-                        <img class='h-[400px] w-[300px] content-center mt-6 bg-clip-border border-4 border-violet-300  ' src="{{ product.image.url }}" >
+            <div class="  h-[600px] w-[350px] overflow-hidden  mx-[100px]">
                     
-                            <div class="px-6 py-4 bg-clip-border p-6 bg-gray-600   border-dashed h-[100px] w-[300px]">
+                    <a href={% url "shop:item" product.id %} class = "MainButton">
+                        <div class='mt-5 bg-clip-border border-4 border-violet-300'>
+                            <img class='h-[400px] w-[300px] grow   ' src="{{ product.image.url }}" >
+                    
                                 
-                                <p class='font-bold text-xl text-black'>{{ product.title }}</p>
-                                <p class='font-bold text-xl text-red-200 mb-2'>{{ product.price }} Р</p>
-                            </div>
+                                    
+                                <div class='bg-white h-[100px] w-[300px]'>
+                                <p class='font-bold text-xl text-black '>{{ product.title }}</p>
+                                <p class='font-bold text-xl text-red-200  '>{{ product.price }} Р</p>
+                                </div>
+                        </div>
                         
-                    </div>
-                </a>
-                </div>
+                        
+                    
+                     </a>
+            </div>
                 
         
             
