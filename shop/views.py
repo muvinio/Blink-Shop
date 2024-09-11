@@ -16,6 +16,8 @@ def subcategory(request, category_title):
 
     return render(request, 'shop/subcategory.html', {'subcategories': subcategories})
 
+# sdfsfsdfsdfsf
+
 
 def products(request, subcategory_title, subcategory_category_name):
 
