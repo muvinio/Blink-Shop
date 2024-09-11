@@ -21,6 +21,7 @@ class SubCategory(models.Model):
 
 class Products(models.Model):
     # sdfsfsdf
+    # sadasd
     title = models.CharField(max_length=25)
     price = models.IntegerField()
     description = models.TextField()
