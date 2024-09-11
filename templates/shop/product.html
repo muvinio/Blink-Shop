@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% block content %}
+    <div class="flex flex-row  font-extrabold mx-[50px]  mt-[100px]">
+        <div class="basis-2/4 text-5xl">
+            <p class=' flex justify-center '>{{ product.title}}</p>
+            <p class='text-left mt-[50px] text-2xl mr-[70px] text-rose-300'>{{product.description}}</p>
+            
+        </div>
+  
+
+        <div class="basis-2/4  flex justify-end">
+            <img class='h-[800px] w-[600px] ' src="{{ product.image.url }}" alt="">
+        </div>
+        
+    </div>
+    
+    
+    
+    
+{% endblock %}
+</html>

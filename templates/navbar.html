@@ -1,0 +1,31 @@
+{% load static %}
+<nav class='w-full bg-white shadow-lg'>
+    
+        <div class='flex flex-row items-center'>
+            <div class="basis-1/4">
+                <! CCылку на корзину поменять надо > 
+                <a href='#' class="flex  MainButton items-center">
+                <img class="h-10 w-10 " src="{% static "shop/images/shop.png" %}"  />
+                
+            </a>
+            </div>
+    
+            <div class="basis-2/4">
+                <a href={% url 'shop:index' %} class="MainButton text-4xl text-pink-600 font-extrabold tracking-widest  ">BLINK</a>
+            </div>
+            <div class="basis-1/4">
+                <a href='#' class="MainButton flex items-center">
+                <img class="h-10 w-10 " src="{% static "shop/images/account.png" %}"  />
+            </a>
+            </div>
+        </div>  
+         
+    
+    
+        
+    
+        
+    
+            
+            
+</nav>
