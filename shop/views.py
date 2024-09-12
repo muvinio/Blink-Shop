@@ -28,3 +28,10 @@ def products(request, subcategory_title, subcategory_category_name):
 def item(request, product_category, product_category_name, product_id):
     product = Products.objects.get(id=product_id)
     return render(request, 'shop/product.html',  {'product': product})
+
+
+def account(request):
+    return render(request, 'shop/account.html')
+
+def sign_up(request):
+    return render(request, 'shop/sign_up.html')
