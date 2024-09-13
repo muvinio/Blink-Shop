@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Category, SubCategory, Products
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout  
 
 # Create your views here.
 
@@ -30,8 +31,15 @@ def item(request, product_category, product_category_name, product_id):
     return render(request, 'shop/product.html',  {'product': product})
 
 
-def account(request):
-    return render(request, 'shop/account.html')
+@login_required
+def profile_view(request):
+    
+    
+    return render(request, 'shop/profile.html')
 
-def sign_up(request):
-    return render(request, 'shop/sign_up.html')
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return render(request, 'registration/logged_out.html')
+

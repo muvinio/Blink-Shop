@@ -14,7 +14,7 @@
         
             <div class="  h-[600px] w-[350px] overflow-hidden  mx-[100px]">
                     
-                    <a href={% url "shop:item" product.id %} class = "MainButton">
+                    <a href={% url "shop:item" product.category product.category_name product.id %} class = "MainButton">
                         <div class='mt-5 bg-clip-border border-4 border-violet-300'>
                             <img class='h-[400px] w-[300px] grow   ' src="{{ product.image.url }}" >
                     

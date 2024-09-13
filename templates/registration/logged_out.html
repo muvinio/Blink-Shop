@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<h1>Logged out</h1>
+
+<h1>You have been successfully logged out.</h2>
+ 
+<a href={% url 'shop:profile'%}>
+    <p class='text-indigo-600'>You can login again</p>
+</a>
+{% endblock %}
